@@ -1,0 +1,349 @@
+.tweetContainer {
+  background: rgb(var(--bg));
+  margin: auto;
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+  min-width: 300px;
+  width: 100%;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  gap: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  border-radius: 12px;
+}
+
+.retweetTag {
+  display: grid;
+  grid-auto-flow: column;
+  color: #828282;
+  font-size: 14px;
+  font-family: "Noto Sans";
+  align-content: center;
+  justify-content: start;
+  margin-bottom: -2rem;
+}
+.tweetAuth {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: start;
+  gap: 1rem;
+}
+.tweetDate {
+  color: rgb(var(--sd-text));
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.tweetImage {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 8px;
+  justify-self: center;
+}
+
+.tweetCaption {
+  font-weight: 400;
+}
+
+.tweetActions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.actionButton {
+  display: grid;
+  align-items: center;
+  justify-content: space-evenly;
+  justify-items: center;
+  grid-auto-flow: column;
+  color: rgb(var(--text));
+  width: 100%;
+  background: rgb(var(--bg));
+}
+.actionButton:hover {
+  background: #f2f2f2;
+}
+
+.tweetComment {
+  display: grid;
+  grid-template-columns: minmax(40px, auto) 1fr;
+  justify-content: start;
+  gap: 1rem;
+  width: 100%;
+}
+
+.commentInput {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline-color: rgb(var(--pr));
+  padding: 0 0.5rem;
+  font-family: Noto Sans;
+  background: #f2f2f2;
+  border-radius: 12px;
+}
+
+.tweetStats {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, auto);
+  justify-items: end;
+  justify-content: end;
+}
+.stat {
+  color: rgb(var(--sd-text));
+  font-family: Noto Sans;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+@media (max-width: 540px) {
+  .buttonText {
+    display: none;
+  }
+}
+
+/*CreatTweet styles*/
+
+.createTweetContainer {
+  padding: 1rem;
+  display: grid;
+  background: rgb(var(--bg));
+  grid-template-rows: repeat(3, auto);
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  gap: 0.25rem 0.5rem;
+  position: relative;
+}
+
+.createTweetInput {
+  display: grid;
+  grid-template-columns: minmax(40px, auto) 1fr;
+  gap: 0 0.5rem;
+}
+
+.createTweetInput > input {
+  width: 100%;
+  border: none;
+  outline-color: rgb(var(--pr));
+  padding: 0 0.5rem;
+  font-family: Noto Sans;
+}
+
+.title {
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.86rem;
+  padding: 0 0 0.5rem 0;
+}
+
+.createTweetActions {
+  display: grid;
+  grid-template-columns: minmax(40px, auto) minmax(40px, auto) 1fr;
+  justify-items: end;
+  gap: 0 1rem;
+  padding-left: calc(40px - 0.5rem);
+}
+
+.tweetButton {
+  display: flex;
+  padding: 0;
+  background: none;
+  color: rgb(var(--text));
+  vertical-align: center;
+  align-items: center;
+  gap: 0 0.5rem;
+  position: relative;
+  color: #828282;
+}
+
+.span {
+  display: flex;
+  vertical-align: center;
+  align-items: center;
+  padding: 0;
+}
+
+.commentForm {
+  position: relative;
+}
+
+.commentImageUpload {
+  position: absolute;
+  top: calc(50% - 10px);
+  right: 1rem;
+  color: rgb(var(--sd-text));
+  cursor: pointer;
+}
+
+.commentImageUpload:hover {
+  color: rgb(var(--pr));
+}
+
+.commentImage {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.tweetButton:hover {
+  background: none;
+  color: rgb(var(--pr));
+}
+
+.optionGroup {
+  position: absolute;
+  bottom: -155px;
+  display: grid;
+  padding: 0.5rem;
+  background: rgb(var(--bg));
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 12px;
+  gap: 0.5rem;
+}
+
+.option {
+  display: flex;
+  padding: 0.5rem;
+  background: none;
+  color: rgb(var(--text));
+  vertical-align: center;
+  align-items: center;
+  gap: 0 0.5rem;
+  border-radius: 8px;
+}
+.optionGroupHeading {
+  font-size: 0.86rem;
+}
+
+.optionGroupDesc {
+  font-family: Noto Sans;
+  font-size: 0.86rem;
+  color: rgb(var(--sd-text));
+  margin-bottom: 0.5rem;
+}
+
+.option:hover {
+  background: #f2f2f2;
+}
+
+.commentSection {
+  padding-top: 1rem;
+  border-top: 1px solid rgb(var(--sd-text));
+}
+.commentSection > div {
+  margin-top: 1rem;
+}
+
+.commentContainer {
+  display: grid;
+  grid-template-columns: minmax(40px, auto) 1fr;
+  gap: 0 1rem;
+}
+
+.commentContentHeader {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 0.5rem;
+}
+
+.commmentStats {
+  display: flex;
+  gap: 0 1.5rem;
+  color: rgb(var(--sd-text));
+  font-size: 0.9rem;
+}
+
+.commentTime {
+  font-size: 0.856rem;
+  color: rgb(var(--sd-text));
+}
+
+.commentContentHeader {
+  display: grid;
+  align-items: baseline;
+}
+
+.commentLike {
+  display: inline-flex;
+  vertical-align: center;
+  align-items: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+.commentContent {
+  background-color: #fafafa;
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: Noto Sans;
+  color: #4f4f4f;
+  display: grid;
+  gap: 0.5rem 0;
+}
+
+@media (max-width: 540px) {
+  .tweetButton {
+    justify-self: start;
+  }
+
+  .createTweetActions {
+    gap: 0;
+    padding-left: 0;
+  }
+}
+
+@keyframes modal {
+  from {
+    background-color: rgba(44, 44, 44, 0);
+  }
+  to {
+    background-color: rgba(44, 44, 44, 0.75);
+  }
+}
+
+@keyframes modalContainer {
+  from {
+    width: 0;
+    height: 0;
+  }
+  to {
+    height: 80vh;
+    width: clamp(300px, 95%, 600px);
+  }
+}
+
+.commentsModal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(44, 44, 44, 0.75);
+  top: 0;
+  left: 0;
+  animation: modal 0.25s ease-out;
+  z-index: 10;
+}
+
+.commentsModalContainer {
+  position: relative;
+  margin: auto;
+  display: grid;
+  gap: 1rem;
+  align-content: flex-start;
+  width: clamp(300px, 95%, 600px);
+  background: rgb(var(--bg));
+  border-radius: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 1rem;
+  overflow-y: scroll;
+  height: 80vh;
+  animation: modalContainer 0.125s ease-out;
+}
+
+.dummyBackground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}

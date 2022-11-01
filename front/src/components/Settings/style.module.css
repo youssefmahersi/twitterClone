@@ -1,0 +1,78 @@
+.settingsContainer {
+  position: relative;
+  display: grid;
+  width: 70%;
+  margin: auto;
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  border-radius: 1rem;
+  background: rgb(var(--bg));
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.textInputList {
+  display: grid;
+  gap: 1rem 0.5rem;
+  grid-template-columns: minmax(auto, 11ch) 1fr;
+}
+
+.input {
+  font-size: inherit;
+  font-family: "noto Sans";
+  font-weight: 400;
+  resize: none;
+  font-size: 14px;
+  outline-color: rgb(var(--pr));
+  border: 1px solid rgb(var(--sd-text));
+  border-radius: 8px;
+  color: rgb(var(--text));
+  padding: 0.5rem;
+}
+
+.submitButton {
+  justify-self: end;
+  align-self: center;
+}
+
+.pc {
+  width: 100%;
+  border-radius: 12px;
+  max-height: 300px;
+  object-fit: cover;
+}
+.pp {
+  width: 160px;
+  border-radius: 12px;
+  justify-self: center;
+}
+.pp:hover,
+.pc:hover {
+  filter: brightness(0.6);
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  justify-self: center;
+  font-size: 0.9rem;
+  font-family: "noto Sans";
+}
+
+.copyToken {
+  justify-self: center;
+  margin-top: -2rem;
+}
+@media (max-width: 540px) {
+  .textInputList {
+    grid-template-columns: none;
+  }
+  .settingsContainer {
+    margin-bottom: 5rem;
+    width: 95%;
+  }
+  .submitButton {
+    justify-self: initial;
+    align-self: initial;
+  }
+}

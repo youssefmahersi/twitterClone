@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+.container {
+  background: rgb(var(--pr));
+  margin: 0;
+  padding: 0.5rem;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+}
+.form {
+  border-radius: 1rem;
+  background-color: rgb(var(--bg));
+  padding: 1rem;
+  margin: auto;
+  display: grid;
+  gap: 1rem;
+  width: clamp(300px, 100%, 600px);
+}
+
+.logo {
+  margin-bottom: 1rem;
+}
+
+.fieldContent {
+  display: grid;
+}
+
+.fieldInput {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 2px solid rgb(var(--pr));
+  outline-color: rgb(var(--pr));
+}
+
+.fieldInput:focus {
+  border: none;
+}
+
+.fieldsList {
+  display: grid;
+  gap: 1rem;
+}
+.fieldError {
+  color: red;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.formTitle {
+  justify-self: center;
+  color: #333;
+  margin: 2.5rem 0;
+}
+
+.fieldsList {
+  display: grid;
+}
+
+.muted {
+  font-size: 0.865rem;
+  color: rgb(var(--sd-text));
+}
+.redirectLink {
+  color: rgb(var(--pr));
+}
+
+.fieldName {
+  margin-bottom: 0.5rem;
+}
+
+.bottomSection {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+.fieldName {
+  font-weight: 600;
+}
+
+.tradeMark {
+  color: white;
+  justify-self: center;
+  font-family: "Noto Sans", sans-serif;
+}
